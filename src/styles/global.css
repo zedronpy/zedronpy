@@ -1,108 +1,15 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+.eslogan {
+  text-align: center;
+  padding: 3rem 1rem 1rem 1rem;
   background-color: #f8fafc;
-  color: #1e293b;
 }
 
-a {
-  color: #0ea5e9;
-  text-decoration: none;
-  margin-right: 1rem;
+.eslogan h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
 }
 
-.hero {
-  background-image: url('/src/assets/portada.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  color: white;
-  text-align: center;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 1rem;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.5rem;
-}
-
-.social-links a {
-  background-color: #10b981;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  margin: 0.5rem;
-  display: inline-block;
-}
-
-.servicios {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background-color: #f1f5f9;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 0.75rem;
-}
-
-.galeria {
-  padding: 4rem 2rem;
-  background-color: #e2e8f0;
-  text-align: center;
-}
-
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.galeria-grid img {
-  width: 100%;
-  border-radius: 0.75rem;
-  object-fit: cover;
-  height: 200px;
-}
-
-.contacto {
-  padding: 3rem 2rem;
-  background-color: #cbd5e1;
-  text-align: center;
-}
-
-footer {
-  background-color: #1e293b;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+.eslogan p {
+  font-size: 1.25rem;
+  color: #475569;
 }
