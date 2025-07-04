@@ -1,3 +1,13 @@
+[⚠️ Suspicious Content] /*
+Proyecto Astro - Sitio de ZedronPy
+Estructura:
+- public/assets/: imágenes
+- public/pdfs/: archivos PDF
+- src/pages/index.astro: página principal
+- src/styles/global.css: estilos
+*/
+
+// src/pages/index.astro
 ---
 import "../styles/global.css";
 ---
@@ -9,9 +19,11 @@ import "../styles/global.css";
     <title>ZedronPy - Servicios con Drones</title>
   </head>
   <body>
+    <!-- Imagen de portada -->
+    <section class="hero-solo"></section>
+
     <!-- Eslogan -->
     <section class="eslogan">
-      <h1>ZedronPy</h1>
       <p>🌱 Soluciones inteligentes para el agro</p>
     </section>
 
@@ -19,32 +31,40 @@ import "../styles/global.css";
     <section class="servicios">
       <h2>🚀 Servicios Profesionales</h2>
       <div class="grid">
-        <a href="/relevamiento" class="card">
-          <img src="/src/assets/relevamiento.jpg" alt="Relevamiento" />
-          <h3>Relevamiento planialtimétrico</h3>
+        <div class="card">
+          <img src="/assets/relevamiento.jpg" alt="Relevamiento" />
+          <h3>
+            <a href="/pdfs/relevamiento.pdf" target="_blank">Relevamiento planialtimétrico</a>
+          </h3>
           <p>Obtención precisa de curvas de nivel, perfiles y cotas para obras civiles y planificación.</p>
-        </a>
-        <a href="/fumigacion" class="card">
-          <img src="/src/assets/fumigacion.jpg" alt="Fumigación" />
-          <h3>Fumigación con drones</h3>
+        </div>
+
+        <div class="card">
+          <img src="/assets/fumigacion.jpg" alt="Fumigación" />
+          <h3>
+            <a href="/pdfs/fumigacion.pdf" target="_blank">Fumigación con drones</a>
+          </h3>
           <p>Apliques seguros, rápidos y controlados sobre el cultivo, sin compactar el suelo.</p>
-        </a>
-        <a href="/monitoreo" class="card">
-          <img src="/src/assets/monitoreo.jpg" alt="Monitoreo" />
-          <h3>Monitoreo de parcelas</h3>
+        </div>
+
+        <div class="card">
+          <img src="/assets/monitoreo.jpg" alt="Monitoreo" />
+          <h3>
+            <a href="/pdfs/monitoreo.pdf" target="_blank">Monitoreo de parcelas</a>
+          </h3>
           <p>Evaluación técnica del estado de cultivos, con imágenes aéreas de alta resolución.</p>
-        </a>
+        </div>
       </div>
     </section>
 
-    <!-- Trabajos Realizados -->
+    <!-- Galería de trabajos -->
     <section class="galeria">
       <h2>🖼️ Trabajos Realizados</h2>
       <div class="galeria-grid">
-        <img src="/src/assets/trabajo1.jpg" alt="Trabajo 1" />
-        <img src="/src/assets/trabajo2.jpg" alt="Trabajo 2" />
-        <img src="/src/assets/trabajo3.jpg" alt="Trabajo 3" />
-        <img src="/src/assets/trabajo4.jpg" alt="Trabajo 4" />
+        <img src="/assets/trabajo1.jpg" alt="Trabajo 1" />
+        <img src="/assets/trabajo2.jpg" alt="Trabajo 2" />
+        <img src="/assets/trabajo3.jpg" alt="Trabajo 3" />
+        <img src="/assets/trabajo4.jpg" alt="Trabajo 4" />
       </div>
     </section>
 
