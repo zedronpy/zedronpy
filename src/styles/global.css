@@ -57,9 +57,8 @@ a {
   border-radius: 0.75rem;
 }
 
-.card h3 a {
+.card h3 {
   color: #0f172a;
-  text-decoration: none;
 }
 
 .galeria {
