@@ -1,4 +1,4 @@
----
+ ---
 import "../styles/global.css";
 ---
 
@@ -22,19 +22,19 @@ import "../styles/global.css";
       <h2>🚀 Servicios Profesionales</h2>
       <div class="grid">
         <div class="card">
-          <img src="/assets/relevamiento.jpg" alt="Relevamiento" />
+          <img src="/assets/relevamiento.jpg" alt="Relevamiento" class="popup-img" />
           <h3>Relevamiento planialtimétrico</h3>
           <p>Obtención precisa de curvas de nivel, perfiles y cotas para obras civiles y planificación.</p>
         </div>
 
         <div class="card">
-          <img src="/assets/fumigacion.jpg" alt="Fumigación" />
+          <img src="/assets/fumigacion.jpg" alt="Fumigación" class="popup-img" />
           <h3>Fumigación con drones</h3>
           <p>Apliques seguros, rápidos y controlados sobre el cultivo, sin compactar el suelo.</p>
         </div>
 
         <div class="card">
-          <img src="/assets/monitoreo.jpg" alt="Monitoreo" />
+          <img src="/assets/monitoreo.jpg" alt="Monitoreo" class="popup-img" />
           <h3>Monitoreo de parcelas</h3>
           <p>Evaluación técnica del estado de cultivos, con imágenes aéreas de alta resolución.</p>
         </div>
@@ -45,12 +45,18 @@ import "../styles/global.css";
     <section class="galeria">
       <h2>🖼️ Trabajos Realizados</h2>
       <div class="galeria-grid">
-        <a href="/assets/trabajo1.jpg" target="_blank"><img src="/assets/trabajo1.jpg" alt="Trabajo 1" /></a>
-        <a href="/assets/trabajo2.jpg" target="_blank"><img src="/assets/trabajo2.jpg" alt="Trabajo 2" /></a>
-        <a href="/assets/trabajo3.jpg" target="_blank"><img src="/assets/trabajo3.jpg" alt="Trabajo 3" /></a>
-        <a href="/assets/trabajo4.jpg" target="_blank"><img src="/assets/trabajo4.jpg" alt="Trabajo 4" /></a>
+        <img src="/assets/trabajo1.jpg" alt="Trabajo 1" class="popup-img" />
+        <img src="/assets/trabajo2.jpg" alt="Trabajo 2" class="popup-img" />
+        <img src="/assets/trabajo3.jpg" alt="Trabajo 3" class="popup-img" />
+        <img src="/assets/trabajo4.jpg" alt="Trabajo 4" class="popup-img" />
       </div>
     </section>
+
+    <!-- Modal para popup -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
 
     <!-- Contacto -->
     <section class="contacto">
@@ -66,5 +72,29 @@ import "../styles/global.css";
     <footer>
       <p>&copy; 2025 ZedronPy - Paraguay. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      const closeBtn = document.getElementsByClassName("close")[0];
+      const images = document.querySelectorAll(".popup-img");
+
+      images.forEach(img => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+        });
+      });
+
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
